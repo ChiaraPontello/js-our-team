@@ -3,6 +3,17 @@
 //MILESTONE 0:
 //Creare l’array di oggetti con le informazioni fornite
 
+//contenuto HTML row
+/*<div class="col-4">
+                <div class="card text-start">
+                    <img class="card-img-top" src="img/wayne-barnett-founder-ceo.jpg" alt="waine">
+                    <div class="card-body text-center">
+                        <h4 class="card-title ">bubu</h4>
+                        <p class="card-text ">bubu</p>
+                    </div>
+                </div>   
+           </div>    
+*/
 
 // creo l'arrey di oggetti (team)
 "use strict";
@@ -38,5 +49,5 @@ const team = [
         ruolo: 'Graphic Designer',
         foto: 'barbara-ramos-graphic-designer.jpg'
     }
-
+ 
 ]
