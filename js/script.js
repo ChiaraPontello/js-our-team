@@ -76,7 +76,7 @@ for (let i= 0; i < team.length; i++){
     console.groupEnd();
 */
 const col = printCol(team[i]);
-rowEl.append(col);
+
 }
 
 //prendo l'html
@@ -93,8 +93,26 @@ function printCol(teams){
                 </div>  
             `;
         col.innerHTML = gruppo;
-        return col;
+        rowEl.append(col);
         }
 
 //aggiungere una persona al team.
+const btn = document.querySelector('button');
+btn.addEventListener('click', function(){
+    const nuovoUtente = {
+   nome: document.getElementById('nome').value,
+   ruolo: document.getElementById('ruolo').value,
+   foto: document.getElementById('foto').value,
+    }
+    console.log(nuovoUtente);
+    team.push(nuovoUtente);
+    printCol(nuovoUtente);
+    reset();
+});
 
+//appena invio si resetta il form
+function reset (){
+    document.getElementById('nome').value = ''
+    document.getElementById('ruolo').value = ''
+    document.getElementById('foto').value = ''
+}
