@@ -15,7 +15,7 @@
                
 */
 
-// creo l'arrey di oggetti (team)
+// creo l'arrey di oggetti (team).
 "use strict";
 
 const team = [
@@ -54,17 +54,17 @@ const team = [
 /*
 MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, 
-ruolo e la stringa della foto
+ruolo e la stringa della foto.
 */
 const rowEl = document.querySelector('.row');
 console.log(rowEl);
 
 /*
 MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
-Trasformare la stringa foto in una immagine effettiva
+Stampare le stesse informazioni su DOM sottoforma di stringhe.
+Trasformare la stringa foto in una immagine effettiva.
 BONUS :
-Organizzare i singoli membri in card/schede
+Organizzare i singoli membri in card/schede.
 */
 
 for (let i= 0; i < team.length; i++){
@@ -96,4 +96,5 @@ function printCol(teams){
         return col;
         }
 
+//aggiungere una persona al team.
 
