@@ -4,7 +4,7 @@
 //Creare l’array di oggetti con le informazioni fornite
 
 //contenuto HTML row
-/*<div class="col-4">
+/*
                 <div class="card text-start">
                     <img class="card-img-top" src="img/wayne-barnett-founder-ceo.jpg" alt="waine">
                     <div class="card-body text-center">
@@ -12,7 +12,7 @@
                         <p class="card-text ">bubu</p>
                     </div>
                 </div>   
-           </div>    
+               
 */
 
 // creo l'arrey di oggetti (team)
@@ -56,14 +56,44 @@ MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, 
 ruolo e la stringa della foto
 */
-for (let i= 0; i< team.length; i++){
+const rowEl = document.querySelector('.row');
+console.log(rowEl);
+
+/*
+MILESTONE 2:
+Stampare le stesse informazioni su DOM sottoforma di stringhe
+Trasformare la stringa foto in una immagine effettiva
+BONUS :
+Organizzare i singoli membri in card/schede
+*/
+
+for (let i= 0; i < team.length; i++){
+/*
     console.group();
     console.log(team[i].nome);
     console.log(team[i].ruolo);
     console.log(team[i].foto);
     console.groupEnd();
+*/
+const col = printCol(team[i]);
+rowEl.append(col);
 }
 
-
+//prendo l'html
+function printCol(teams){
+    const col = document.createElement("div");
+    col.classList.add("col-4");
+    const gruppo = `
+                <div class="card text-start">
+                    <img class="card-img-top" src="img/${teams.foto}" alt="waine">
+                    <div class="card-body text-center">
+                        <h4 class="card-title ">${teams.nome}</h4>
+                        <p class="card-text ">${teams.ruolo}</p>
+                    </div>
+                </div>  
+            `;
+        col.innerHTML = gruppo;
+        return col;
+        }
 
 
